@@ -9,7 +9,7 @@ def client():
 def test_home(client):
     res = client.get("/")
     assert res.status_code == 200
-    assert b"CI CD Demo Version" in res.data
+    assert b"RANDOM" in res.data
 
 def test_health(client):
     res = client.get("/health")
